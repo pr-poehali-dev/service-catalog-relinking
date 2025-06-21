@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -10,6 +11,7 @@ const Services = () => {
         "Профессиональная чистка прямо у вас дома. Современное оборудование и экологичные средства.",
       price: "от 300₽/м²",
       color: "from-blue-500 to-blue-600",
+      slug: "carpet-cleaning-home",
     },
     {
       icon: "Truck",
@@ -18,6 +20,7 @@ const Services = () => {
         "Забираем ковёр, чистим в цеху и возвращаем в идеальном состоянии.",
       price: "от 250₽/м²",
       color: "from-green-500 to-green-600",
+      slug: "carpet-cleaning-pickup",
     },
     {
       icon: "Droplets",
@@ -26,6 +29,7 @@ const Services = () => {
         "Диваны, кресла, матрасы - возвращаем первозданную чистоту и свежесть.",
       price: "от 800₽",
       color: "from-orange-500 to-orange-600",
+      slug: "furniture-cleaning",
     },
     {
       icon: "Wind",
@@ -34,6 +38,7 @@ const Services = () => {
         "Специальная обработка для полного устранения неприятных запахов.",
       price: "от 500₽",
       color: "from-purple-500 to-purple-600",
+      slug: "odor-removal",
     },
     {
       icon: "Shield",
@@ -42,6 +47,7 @@ const Services = () => {
         "Защита от бактерий, грибков и пылевых клещей. Безопасно для детей и животных.",
       price: "от 200₽/м²",
       color: "from-teal-500 to-teal-600",
+      slug: "antibacterial-treatment",
     },
     {
       icon: "Star",
@@ -50,6 +56,7 @@ const Services = () => {
         "Восстановление старых и повреждённых ковров. Профессиональный ремонт.",
       price: "от 1000₽",
       color: "from-pink-500 to-pink-600",
+      slug: "carpet-restoration",
     },
   ];
 
@@ -90,11 +97,12 @@ const Services = () => {
                   <span className="text-2xl font-bold text-gray-900">
                     {service.price}
                   </span>
-                  <button
+                  <Link
+                    to={`/services/${service.slug}`}
                     className={`px-4 py-2 bg-gradient-to-r ${service.color} text-white rounded-lg text-sm font-medium hover:shadow-lg transition-all`}
                   >
-                    Заказать
-                  </button>
+                    Подробнее
+                  </Link>
                 </div>
               </CardContent>
             </Card>

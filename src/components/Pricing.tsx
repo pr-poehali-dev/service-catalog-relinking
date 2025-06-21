@@ -109,6 +109,36 @@ const Pricing = () => {
         </div>
 
         <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              🔥 Специальные предложения
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-xl p-6 border-2 border-red-200">
+                <h4 className="text-lg font-bold text-red-600 mb-2">
+                  Первый заказ -20%
+                </h4>
+                <p className="text-gray-600">
+                  Скидка для новых клиентов на любую услугу
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border-2 border-green-200">
+                <h4 className="text-lg font-bold text-green-600 mb-2">
+                  Комплекс от 5000₽
+                </h4>
+                <p className="text-gray-600">Ковёр + мебель со скидкой 15%</p>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            to="/pricing"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-xl transition-all mr-4 mb-4"
+          >
+            <Icon name="FileText" size={20} className="mr-2" />
+            Полный прайс
+          </Link>
+
           <p className="text-gray-600 mb-4">
             Нужна индивидуальная консультация?
           </p>

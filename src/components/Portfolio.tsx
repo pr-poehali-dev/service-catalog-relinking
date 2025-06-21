@@ -7,24 +7,60 @@ const Portfolio = () => {
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop",
       after:
         "https://images.unsplash.com/photo-1558618047-3c8d9ac9fe00?w=400&h=300&fit=crop",
-      title: "Персидский ковёр",
-      description: "Удаление винных пятен и глубокая чистка",
+      title: "Персидский ковёр антик",
+      problem: "Застарелые винные пятна, потеря цвета",
+      solution: "Деликатная реставрация с восстановлением красок",
+      result: "Ковёр выглядит как новый, яркие цвета восстановлены",
     },
     {
       before:
         "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
       after:
         "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-      title: "Детский ковёр",
-      description: "Антибактериальная обработка и устранение запахов",
+      title: "Детский ковёр с пятнами",
+      problem: "Пятна от сока, запах мочи домашних животных",
+      solution: "Глубокая биоочистка + антибактериальная обработка",
+      result: "100% устранение запахов, безопасность для детей",
     },
     {
       before:
         "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&h=300&fit=crop",
       after:
         "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
-      title: "Офисное покрытие",
-      description: "Профессиональная чистка в коммерческом помещении",
+      title: "Офисное ковровое покрытие",
+      problem: "Сильное загрязнение, потертости от обуви",
+      solution: "Промышленная чистка с защитной пропиткой",
+      result: "Продлен срок службы на 3-5 лет",
+    },
+    {
+      before:
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop",
+      after:
+        "https://images.unsplash.com/photo-1558618047-3c8d9ac9fe00?w=400&h=300&fit=crop",
+      title: "Диван с пятнами жира",
+      problem: "Жирные пятна от еды, неприятный запах",
+      solution: "Химчистка с обезжиривающими средствами",
+      result: "Полное удаление пятен, свежесть ткани",
+    },
+    {
+      before:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+      after:
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      title: "Матрас после затопления",
+      problem: "Следы воды, плесень, затхлый запах",
+      solution: "Экстренная сушка + противогрибковая обработка",
+      result: "Матрас спасен, устранена вся плесень",
+    },
+    {
+      before:
+        "https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&h=300&fit=crop",
+      after:
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+      title: "Шелковый ковёр ручной работы",
+      problem: "Деликатная ткань требует особого ухода",
+      solution: "Ручная чистка специальными средствами",
+      result: "Сохранен блеск шелка, структура не повреждена",
     },
   ];
 
@@ -40,7 +76,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {works.map((work, index) => (
             <Card
               key={index}
@@ -73,7 +109,26 @@ const Portfolio = () => {
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {work.title}
                   </h3>
-                  <p className="text-gray-600">{work.description}</p>
+                  <div className="space-y-2 text-sm">
+                    <div>
+                      <span className="font-medium text-red-600">
+                        Проблема:
+                      </span>
+                      <p className="text-gray-600">{work.problem}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-blue-600">
+                        Решение:
+                      </span>
+                      <p className="text-gray-600">{work.solution}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-green-600">
+                        Результат:
+                      </span>
+                      <p className="text-gray-600">{work.result}</p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -90,13 +145,13 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700">
-                📸 1000+ довольных клиентов
+                📸 5000+ довольных клиентов
               </span>
               <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700">
                 ⭐ 4.9/5 средняя оценка
               </span>
               <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-gray-700">
-                🏆 5 лет опыта
+                🏆 8 лет опыта
               </span>
             </div>
           </div>
